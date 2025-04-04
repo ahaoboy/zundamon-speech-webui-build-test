@@ -21,28 +21,31 @@ jobs:
           curl -L -o zundamonspeech_builder_cpu.zip.001 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.001
           curl -L -o zundamonspeech_builder_cpu.zip.002 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.002
           curl -L -o zundamonspeech_builder_cpu.zip.003 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.003
-          curl -L -o zundamonspeech_builder_cpu.zip.004 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.004
+          # curl -L -o zundamonspeech_builder_cpu.zip.004 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.004
 
           7z x zundamonspeech_builder_cpu.zip.001 -y
 
-      - name: init python
-        run: |
-          echo "$PWD\python_cpu" | Out-File -Append -Encoding utf8 $env:GITHUB_PATH
-          echo "$PWD\python_cpu\Scripts" | Out-File -Append -Encoding utf8 $env:GITHUB_PATH
+      # - name: init python
+      #   run: |
+      #     echo "$PWD\python_cpu" | Out-File -Append -Encoding utf8 $env:GITHUB_PATH
+      #     echo "$PWD\python_cpu\Scripts" | Out-File -Append -Encoding utf8 $env:GITHUB_PATH
 
       - name: run
         run: |
-          which python
-          which streamlit
+          # which python
+          # which streamlit
 
           ls
+
+          ./run_cpu.bat
+
           # cat ./run.cpu.bat
           # ./run.cpu.bat
           # ./run_cpu.bat
 
-          cd zundamon-speech-webui
+          # cd zundamon-speech-webui
 
-          python ./zundamon_speech_run.py
+          # python ./zundamon_speech_run.py
 
 
 
