@@ -21,7 +21,7 @@ jobs:
           curl -L -o zundamonspeech_builder_cpu.zip.001 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.001
           curl -L -o zundamonspeech_builder_cpu.zip.002 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.002
           curl -L -o zundamonspeech_builder_cpu.zip.003 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.003
-          # curl -L -o zundamonspeech_builder_cpu.zip.004 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.004
+          curl -L -o zundamonspeech_builder_cpu.zip.004 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.004
 
           7z x zundamonspeech_builder_cpu.zip.001 -y
 
