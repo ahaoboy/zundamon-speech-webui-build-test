@@ -36,7 +36,13 @@ jobs:
           which streamlit
 
           ls
-          cat ./run.cpu.bat
-          ./run.cpu.bat
+          # cat ./run.cpu.bat
+          # ./run.cpu.bat
           # ./run_cpu.bat
+
+          cd zundamon-speech-webui
+
+          python ./zundamon_speech_run.py
+
+
 
