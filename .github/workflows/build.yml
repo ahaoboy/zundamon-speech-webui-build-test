@@ -25,11 +25,16 @@ jobs:
 
           7z x zundamonspeech_builder_cpu.zip.001 -y
 
+      - name: init python
+        run: |
           echo "$PWD\python_cpu" | Out-File -Append -Encoding utf8 $env:GITHUB_PATH
           echo "$PWD\python_cpu\Scripts" | Out-File -Append -Encoding utf8 $env:GITHUB_PATH
 
       - name: run
         run: |
+          which python
+          which streamlit
+
           ls
           cat ./run.cpu.bat
           ./run.cpu.bat
