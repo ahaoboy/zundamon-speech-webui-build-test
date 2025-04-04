@@ -1,0 +1,32 @@
+name: build
+
+permissions:
+  contents: write
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  test-windows-cpu:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: download
+        run: |
+          curl -L -o zundamonspeech_builder_cpu.zip.001 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.001
+          curl -L -o zundamonspeech_builder_cpu.zip.002 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.002
+          curl -L -o zundamonspeech_builder_cpu.zip.003 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.003
+          curl -L -o zundamonspeech_builder_cpu.zip.004 https://github.com/ahaoboy/zundamon-speech-webui-build/releases/download/v0.1.0/zundamonspeech_builder_cpu.zip.004
+
+          7z x zundamonspeech_builder_cpu.zip.001 -y
+
+      - name: run
+        run: |
+          ls
+          cat ./run.cpu.bat
+          ./run.cpu.bat
