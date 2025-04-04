@@ -1,3 +1,4 @@
+$PSDefaultParameterValues['Out-Default:Width'] = 4096
 Get-ChildItem -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object @{
     Name="RelativePath";
     Expression={$_.FullName.Substring((Get-Location).Path.Length).TrimStart('\').Replace('\','/')}
