@@ -49,3 +49,7 @@ jobs:
 
 
 
+      - name: run again
+        run: |
+          ls
+          ./run_cpu.bat
